@@ -52,7 +52,7 @@ class ProyectoForm(forms.ModelForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['ingenieros_a_cargo'].label_from_instance = lambda obj: f"{obj.Nombres} {obj.Apellidos}"
+        self.fields['ingenieros_a_cargo'].label_from_instance = lambda obj: f"{obj.Nombres} {obj.Apellidos} - {obj.Username}"
         self.fields['cliente'].label_from_instance = lambda obj: f"{obj.Razon_social}"
     
     class Meta:
